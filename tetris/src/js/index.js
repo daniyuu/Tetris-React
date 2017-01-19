@@ -6,8 +6,11 @@ import tetrisApp from 'js/reducers'
 import App from 'components/App';
 import 'css/index.css';
 
+let store = createStore(tetrisApp);
 
 ReactDOM.render(
-    <App/>,
+    <Provider store={store}>
+        <App/>
+    </Provider>,
     document.getElementById('root')
 );

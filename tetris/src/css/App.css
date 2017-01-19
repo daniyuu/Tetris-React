@@ -18,7 +18,18 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.BlockElemBlank {
+  height: 10px;
+  width: 10px;
+  border: white;
+  border-width: 1px;
+  background: gray;
+}
+
+.BlockElemTetris {
+  height: 10px;
+  width: 10px;
+  border: white;
+  border-width: 1px;
+  background: blue;
 }

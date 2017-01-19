@@ -1,14 +1,17 @@
 import React, {Component} from 'react';
-import logo from '../../logo.svg';
 import '../../css/App.css';
 import Board from './Board';
+import BlockElem from './BlockElem';
 
 class App extends Component {
     render() {
         return (
             <div className="App">
-                dfsadsa
                 <Board/>
+                <BlockElem isBlank={true} />
+                <BlockElem isBlank={false} />
+                <BlockElem isBlank={true} />
+
             </div>
         );
     }
