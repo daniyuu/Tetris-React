@@ -2,19 +2,18 @@
  * Created by daniy on 1/17/2017.
  */
 
+var path = require('path');
+
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
     template: __dirname + '/public/index.html',
-    filename: 'index.html',
-    inject: 'body'
+    filename: 'index.html'
 });
-
-var path = require('path');
 
 module.exports = {
     entry: './src/js/index.js',
     output: {
-        path: __dirname+ '/public',
+        path: __dirname + '/public',
         filename: 'bundle.js',
     },
     module: {
@@ -40,6 +39,10 @@ module.exports = {
         ]
     },
     resolve: {
+        root: [
+            path.resolve('./src'),
+            path.resolve('./src/js'),
+        ],
         extensions: ['', '.js', '.jsx']
     },
     plugins: [HTMLWebpackPluginConfig]
