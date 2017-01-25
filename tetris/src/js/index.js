@@ -9,8 +9,7 @@ import 'css/index.css';
 let store = createStore(tetrisApp);
 
 ReactDOM.render(
-    <Provider store={store}>
-        <App/>
-    </Provider>,
+        <App/>,
     document.getElementById('root')
+
 );

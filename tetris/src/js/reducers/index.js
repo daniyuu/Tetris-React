@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux';
 import settings from './settings';
-import {REFRESH_BOARD} from 'actions/index'
+import {REFRESH_BOARD, START_GAME} from 'actions/index'
 
 function board(state = [], action) {
     switch (action.type) {
@@ -11,8 +11,18 @@ function board(state = [], action) {
     }
 }
 
+function gameStatus(state = true, action) {
+    switch (action.type) {
+        case START_GAME:
+            return true;
+        default:
+            return state;
+    }
+}
+
 const tetrisApp = combineReducers({
-    board
+    board,
+    gameStatus
 });
 
 export default tetrisApp;
