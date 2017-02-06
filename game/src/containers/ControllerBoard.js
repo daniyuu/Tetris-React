@@ -3,8 +3,8 @@
  */
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
-import Board from './../components/Board';
-import {refreshBoard} from '../actions';
+import Board from 'components/Board';
+import {refreshBoard} from 'actions';
 
 const mapStateToProps = (state, ownProps) => {
     return {
